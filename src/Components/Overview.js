@@ -10,48 +10,52 @@ const Overview = () => {
       <h2>"{currentDisplay.name.common}"</h2>
 
       <table className="overview-table">
-        <tr>
-          <td>Borders: </td>
-          <td>
-            {currentDisplay.borders
-              ? currentDisplay.borders.map((e, i, arr) => {
-                  if (i + 1 === arr.length) {
-                    return `${e}`;
-                  } else {
-                    return `${e}, `;
-                  }
-                })
-              : "N/A"}
-          </td>
-        </tr>
-        <tr>
-          <td>Capitol: </td>
-          {currentDisplay.capital.map((e) => (
-            <td>{e}</td>
-          ))}
-        </tr>
-        <tr>
-          <td>Population: </td>
-          <td>{currentDisplay.population}</td>
-        </tr>
-        <tr>
-          <td>Continents: </td>
-          {currentDisplay.continents.map((e) => (
-            <td>{e}</td>
-          ))}
-        </tr>
-        <tr>
-          <td>Independant: </td>
-          <td>{currentDisplay.indepenent ? "true" : "false"}</td>
-        </tr>
-        <tr>
-          <td>LandLocked: </td>
-          <td>{currentDisplay.landlocked ? "true" : "false"}</td>
-        </tr>
-        <tr>
-          <td>Member of UN: </td>
-          <td>{currentDisplay.unMember ? "true" : "false"}</td>
-        </tr>
+        <thead>
+          <tr>
+            <td>Borders: </td>
+            <td>
+              {currentDisplay.borders
+                ? currentDisplay.borders.map((e, i, arr) => {
+                    if (i + 1 === arr.length) {
+                      return `${e}`;
+                    } else {
+                      return `${e}, `;
+                    }
+                  })
+                : "N/A"}
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Capitol: </td>
+            {currentDisplay.capital.map((e) => (
+              <td>{e}</td>
+            ))}
+          </tr>
+          <tr>
+            <td>Population: </td>
+            <td>{currentDisplay.population}</td>
+          </tr>
+          <tr>
+            <td>Continents: </td>
+            {currentDisplay.continents.map((e) => (
+              <td>{e}</td>
+            ))}
+          </tr>
+          <tr>
+            <td>Independant: </td>
+            <td>{currentDisplay.indepenent ? "true" : "false"}</td>
+          </tr>
+          <tr>
+            <td>LandLocked: </td>
+            <td>{currentDisplay.landlocked ? "true" : "false"}</td>
+          </tr>
+          <tr>
+            <td>Member of UN: </td>
+            <td>{currentDisplay.unMember ? "true" : "false"}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   );
